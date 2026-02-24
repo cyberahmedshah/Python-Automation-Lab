@@ -1,7 +1,7 @@
 import time
 Current_time = time.localtime()
 Current_hour =Current_time.tm_hour
-if Current_hour <12 and Current_hour >=5:
+if 5 <= Current_hour <12:
     print("Good Morning")
 elif Current_hour <16:
     print("Good Afternoon")
