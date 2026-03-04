@@ -1,6 +1,6 @@
 import random
 secret_number=random.randint(1, 101)
-for i in range(1, 11):
+for i in range(1, 6):
  guess=int(input(f"Attempt {i}, Guess the number(1-100): "))
  if guess==secret_number:
   print("Right! you won")
