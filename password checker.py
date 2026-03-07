@@ -4,7 +4,7 @@ for i in range(1, 4):
     if key==correct_password:
      print("Access granted")
      break
-    elif key!=correct_password :
+    elif i<3:
        print("Wrong password! Try again")
 else:
        print("Account Locked")
