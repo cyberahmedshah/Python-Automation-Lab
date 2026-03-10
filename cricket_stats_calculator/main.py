@@ -13,7 +13,7 @@ print("2. Batting Strike Rate")
 print("3. Bowling Average")
 print("4. Bowling Strike Rate")
 
-choice = int(input("Enter your choice (1 or 2 or 3): "))
+choice = int(input("Enter your choice (1 to 4): "))
 
 if choice == 1:
     total_runs=int(input("Enter total runs scored: "))
