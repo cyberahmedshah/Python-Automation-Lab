@@ -6,14 +6,18 @@ from Batting import Batting_Strike_rate
 from Bowling import Bowling_Average
 from Bowling import Bowling_Strike_Rate
 
+# importing the function from the NRR module
+from NRR import net_run_rate
+
 #A menu for the user to choose the type of stats they want calculate
 print("Choose the type of stats you want to calculate:")
 print("1. Batting Average")
 print("2. Batting Strike Rate")
 print("3. Bowling Average")
 print("4. Bowling Strike Rate")
+print("5. Net Run Rate")
 
-choice = int(input("Enter your choice (1 to 4): "))
+choice = int(input("Enter your choice (1 to 5): "))
 
 if choice == 1:
     total_runs=int(input("Enter total runs scored: "))
@@ -32,4 +36,11 @@ elif choice == 4:
     total_balls_bowled=int(input("Enter total balls bowled: "))
     total_wickets_taken=int(input("Enter total wickets taken: "))
     print(f"The bowling strike rate of bowler is: {Bowling_Strike_Rate(total_balls_bowled, total_wickets_taken):.2f}")
-else:    print("Invalid choice. Please choose 1, 2, 3 or 4.")
+elif choice == 5:
+    runs_scored=int(input("Enter total runs scored: "))
+    runs_conceded=int(input("Enter total runs conceded: "))
+    overs_faced=int(input("Enter total overs faced: "))
+    overs_bowled=int(input("Enter total overs bowled: "))
+    print(f"The net run rate of the team is: {net_run_rate(overs_faced, runs_scored, overs_bowled, runs_conceded):.2f}")
+else:
+    print("Invalid choice. Please choose 1, 2, 3, 4 or 5.")
