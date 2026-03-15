@@ -40,12 +40,18 @@ elif choice == 4:
     total_wickets_taken=int(input("Enter total wickets taken: "))
     print(f"The bowling strike rate of bowler is: {Bowling_Strike_Rate(total_balls_bowled, total_wickets_taken):.2f}")
 elif choice == 5:
-    runs_scored=int(input("Enter total runs scored: "))
-    overs_faced=float(input("Enter total overs faced(if the team was allout than enter the maximum number of overs): "))
-    runs_conceded=int(input("Enter total runs conceded: "))
-    overs_bowled=float(input("Enter total overs bowled(if the team was allout than enter the maximum number of overs): "))
-    overs_faced = convert_overs(overs_faced)
-    overs_bowled = convert_overs(overs_bowled)
-    print(f"The net run rate of the team is: {net_run_rate(overs_faced, runs_scored, overs_bowled, runs_conceded):.2f}")
+    print("(i). Calculate NRR for a single match")
+    print("(ii). Calculate NRR for a tournament")
+    nrr_choice = input("Enter your choice (i or ii): ")
+    if nrr_choice == 'i':
+     runs_scored=int(input("Enter total runs scored: "))
+     overs_faced=float(input("Enter total overs faced(if the team was allout than enter the maximum number of overs): "))
+     runs_conceded=int(input("Enter total runs conceded: "))
+     overs_bowled=float(input("Enter total overs bowled(if the team was allout than enter the maximum number of overs): "))
+     overs_faced = convert_overs(overs_faced)
+     overs_bowled = convert_overs(overs_bowled)
+     print(f"The net run rate of the team is: {net_run_rate(overs_faced, runs_scored, overs_bowled, runs_conceded):.2f}")
+    elif nrr_choice == 'ii': 
+       print("coming soon")
 else:
     print("Invalid choice. Please choose 1, 2, 3, 4 or 5.")
