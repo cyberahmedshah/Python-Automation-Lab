@@ -1,3 +1,5 @@
+print("Welcome to the Money Quiz!" "\n" "Answer the following questions to win cash prizes!(no room for spelling mistakes)" "\n" "\n"
+"Here we go!" "\n"), 
 Questions=["who invented the first paper money?","what is the name of the first paper money?","when was the first paper money invented?" 
            ,"who invented linux?", "when was linux invented?", "who was the first presidnet of united stayes?"]
 
