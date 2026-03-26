@@ -20,16 +20,16 @@
 # print(s.issuperset(e))
 # print(s.isdisjoint(e))
 
-d={
-    111: "Ahmed",
-    112: "Hamza",
-    113: "Ali",
-    114: "Hassan"
-}
+# d={
+#     111: "Ahmed",
+#     112: "Hamza",
+#     113: "Ali",
+#     114: "Hassan"
+# }
 
 
-d.pop(114)
-print(d)
+# d.pop(114)
+# print(d)
 
 
 #print(d[int(input("Enter the id: "))])
@@ -46,3 +46,12 @@ print(d)
 #     int(input("Enter the id: ")): input("Enter the name: "),
 
 # }
+
+
+for i in range(11):
+  
+ if i==5:
+        continue
+ print(i)   
+else:
+    print("Loop tested")
