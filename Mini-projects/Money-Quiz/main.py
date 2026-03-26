@@ -19,5 +19,5 @@ for i in range(len(Questions)):
         print("Wrong!")
         cash-=5 
 
-print("Cash won: $" + str(cash)) 
+print(f"Cash won: $ {str(cash)}") 
  
