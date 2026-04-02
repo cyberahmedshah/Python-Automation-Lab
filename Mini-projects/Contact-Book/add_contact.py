@@ -3,7 +3,6 @@ import json
 import os
 
 FILE = os.path.join(os.path.dirname(__file__), "contacts.json")
-print("Saving to:", FILE)  # Add this to debug
 
 def load_contacts():
     if os.path.exists(FILE):
