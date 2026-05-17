@@ -48,10 +48,88 @@
 # }
 
 
-for i in range(11):
+# for i in range(11):
   
- if i==5:
-        continue
- print(i)   
-else:
-    print("Loop tested")
+#  if i==5:
+#         continue
+#  print(i)   
+# else:
+#     print("Loop tested")
+
+
+# x=int(input("Enter the number: "))
+# if x%2==0:
+#     print("Even")
+# else:
+#     print("Odd")
+
+
+# for i in range(1,11):
+#     if i%2==0:
+#         print(f"{i} is even")
+#     else:
+#         print(f"{i} is odd")
+
+
+
+# for i in range(11):
+#     if i==7:
+#      continue
+#     print(i)
+# else:
+#     print("working")
+
+
+
+# for i in range(1, 6):
+#     print(f"iteration no {i} in for loop")
+# else:
+#     print("end of loop")
+# print("out of loop")
+
+
+# try:
+#  a=int(input("Enter the number: "))
+#  for i in range(1, 11):
+#   print(f"{a} x {i} = {(a)*i}")
+# except:
+#   print("Invalid input")
+
+# # print("program working")
+
+
+
+# a=int(input("Enter the number: "))
+# for i in range(1,11):
+#     if type(a) is int:
+#         print(f"{a} x {i} = {a*i}")
+#     elif type(a) is str:
+#         print ("invalid input")
+
+
+
+# def test(a, n):
+#     try:
+#      return a*n
+#     finally:
+#         print("Done")
+
+
+
+# a= int(input("Number one: "))
+# b= int(input("Number two: "))
+# print(test(a, b))
+
+
+
+a=input("Enter the number(1-9): " ).lower()
+
+if a=="quit":
+    print("Program Exited")
+    exit()
+b=int(a)
+if b<1 or b>9:
+    raise ValueError
+if b>=1 and b<=9:
+    print("Program Working")
+
