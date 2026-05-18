@@ -1,4 +1,3 @@
-#A mini intro to the game
 print("Welcome to the Money Quiz!" "\n" "Answer the following questions to win cash prizes!(no room for spelling mistakes)" "\n" "\n"
 "Here we go!" "\n")
 
