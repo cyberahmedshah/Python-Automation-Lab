@@ -10,4 +10,4 @@ for i in range(1, len(Questions)):
  else:
   Cash-=5
   print("Wrong(-5$)")
-print(f"Cash won: $ {(Cash)}") 
+print(f"Cash won: $ {(Cash)}")

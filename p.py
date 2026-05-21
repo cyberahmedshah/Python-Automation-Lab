@@ -122,14 +122,16 @@
 
 
 
-a=input("Enter the number(1-9): " ).lower()
+# a=input("Enter the number(1-9): " ).lower()
 
-if a=="quit":
-    print("Program Exited")
-    exit()
-b=int(a)
-if b<1 or b>9:
-    raise ValueError
-if b>=1 and b<=9:
-    print("Program Working")
+# if a=="quit":
+#     print("Program Exited")
+#     exit()
+# b=int(a)
+# if b<1 or b>9:
+#     raise ValueError
+# if b>=1 and b<=9:
+#     print("Program Working")
+
+
 
