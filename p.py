@@ -135,13 +135,23 @@
 
 
 
-a=[{"Questions":"Who created linux?", "OPtions":"a.me" "b.he" "c.they d.us", "answers":"a"}]
-print(a)
-answer=str(input("Enter the option: ")).strip().lower()
-if answer== a[{"answers"}]:
-    print("correct")
-else:
-    print("wrong")
+# a=[{"Questions":"Who created linux?", "OPtions":"a.me" "b.he" "c.they d.us", "answers":"a"}]
+# answer=str(input("Enter the option: ")).strip().lower()
+# if answer== a[{"answers"[1]}]:
+#     print("correct")
+# else:
+#     print("wrong")
 
 
+list=[
+   {
+      "Ahmed":["1", "2", "3"],
+      "Amna":"2",
+      "Khadija":"3"
+      }
+    ]
+for i in list:
+    print(i["Khadija"])
+    for a in i["Ahmed"]:
+     print(a)
 
