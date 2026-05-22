@@ -135,9 +135,10 @@
 
 
 
-a=[{"Questions":"Who created linux?", "OPtions":["a.me" "b.he" "c.they d.us"], "answers":"a"}]
-answer=str(input("Enter the option: ")).lower()
-if answer== a["answers"]:
+a=[{"Questions":"Who created linux?", "OPtions":"a.me" "b.he" "c.they d.us", "answers":"a"}]
+print(a)
+answer=str(input("Enter the option: ")).strip().lower()
+if answer== a[{"answers"}]:
     print("correct")
 else:
     print("wrong")

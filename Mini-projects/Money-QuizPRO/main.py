@@ -8,6 +8,5 @@ for i in range(1, len(Questions)):
   Cash+=5
   print("Correct(+5$)")
  else:
-  Cash-=5
-  print("Wrong(-5$)")
-print(f"Cash won: $ {(Cash)}")
+  break
+print(f"Your total cash is: {Cash}$")
