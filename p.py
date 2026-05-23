@@ -143,15 +143,7 @@
 #     print("wrong")
 
 
-list=[
-   {
-      "Ahmed":["1", "2", "3"],
-      "Amna":"2",
-      "Khadija":"3"
-      }
-    ]
-for i in list:
-    print(i["Khadija"])
-    for a in i["Ahmed"]:
-     print(a)
 
+id=[2, 43, 14, 99, 81]
+for v, i in enumerate(id):
+    print(f"{v}.",i)

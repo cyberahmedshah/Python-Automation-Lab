@@ -1,6 +1,6 @@
 questions=[
   {
-   "question" : "1.When was linux invented?",
+   "question" : "When was linux invented?",
    "options" : [
     "a.1992", 
     "b.1984", 
@@ -11,7 +11,7 @@ questions=[
   },
 
   {
-   "question" : "2.In which language was linux written?",
+   "question" : "In which language was linux written?",
    "options" : [
     "a.C",
     "b.Python",
@@ -22,7 +22,7 @@ questions=[
   },
 
   {
-   "question" : "3.Who invented linux?",
+   "question" : "Who invented linux?",
    "options" : [
    "a.Bill Gates",
     "b.Steve Jobs",
@@ -34,8 +34,8 @@ questions=[
 ]
 
 cash=0
-for i in questions :
-  print ("\n" + i["question"])
+for index, i in enumerate(questions, start=1) :
+  print ("\n" + f"{index}.{i['question']}")
  
   for o in i["options"]:
    print(o)
