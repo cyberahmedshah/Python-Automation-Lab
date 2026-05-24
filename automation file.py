@@ -6,7 +6,7 @@ projects_folder = os.path.join(base_path, "projects")
 
 os.makedirs(projects_folder, exist_ok=True)
 
-# EXACT filenames from your system
+# EXACT filenames from my system
 project_map = {
     "Calculator.py": "calculator",
     "Greeting program.py": "greeting-app",
@@ -23,7 +23,7 @@ for file_name, folder_name in project_map.items():
     old_path = os.path.join(base_path, file_name)
 
     if not os.path.exists(old_path):
-        print(f"❌ Skipping {file_name} (not found)")
+        print(f"Skipping {file_name} (not found)")
         continue
 
     new_folder_path = os.path.join(projects_folder, folder_name)
@@ -34,6 +34,6 @@ for file_name, folder_name in project_map.items():
 
     shutil.move(old_path, new_file_path)
 
-    print(f"✅ Moved: {file_name} → {folder_name}/main.py")
+    print(f"Moved: {file_name} → {folder_name}/main.py")
 
-print("\n🚀 All files organized successfully!")
+print("\n All files organized successfully!")
