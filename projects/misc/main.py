@@ -144,6 +144,125 @@
 
 
 
-id=[2, 43, 14, 99, 81]
-for v, i in enumerate(id):
-    print(f"{v}.",i)
+# id=[2, 43, 14, 99, 81]
+# for v, i in enumerate(id):
+#     print(f"{v}."
+
+"""
+Basic AI Chatbot Backend — Python
+Uses the Anthropic Claude API to power a simple conversational chatbot.
+
+Install dependency first:
+    pip install anthropic
+
+Set your API key:
+    export ANTHROPIC_API_KEY="your-api-key-here"
+    (Get a free key at: https://console.anthropic.com)
+"""
+
+import os
+from anthropic import Anthropic
+
+# ── 1. Setup ──────────────────────────────────────────────────────────────────
+
+# The Anthropic client automatically reads ANTHROPIC_API_KEY from the environment
+client = Anthropic()
+
+# Conversation history — this is how the AI "remembers" the chat.
+# Each message is a dict: {"role": "user" or "assistant", "content": "..."}
+conversation_history = []
+
+# System prompt — gives the AI its personality and rules
+SYSTEM_PROMPT = """
+You are a helpful, friendly, and concise assistant.
+Answer the user's questions clearly and honestly.
+If you don't know something, say so.
+"""
+
+# ── 2. Core function ──────────────────────────────────────────────────────────
+
+def chat(user_message: str) -> str:
+    """
+    Send a user message to Claude and get a reply.
+
+    How it works:
+    1. Append the user's message to the conversation history
+    2. Send the full history to the Claude API
+    3. Get Claude's reply, append it to history, and return it
+
+    The history is what gives the bot "memory" — without it, every
+    message would be treated as a brand new conversation.
+    """
+
+    # Step 1 — Add the user's message to history
+    conversation_history.append({
+        "role": "user",
+        "content": user_message
+    })
+
+    # Step 2 — Call the Claude API with the full conversation so far
+    response = client.messages.create(
+        model="claude-sonnet-4-20250514",   # The Claude model to use
+        max_tokens=1024,                     # Max length of the reply
+        system=SYSTEM_PROMPT,                # Bot personality / instructions
+        messages=conversation_history        # Full chat history for context
+    )
+
+    # Step 3 — Extract the reply text from the response
+    assistant_reply = response.content[0].text
+
+    # Step 4 — Save the bot's reply to history so future turns remember it
+    conversation_history.append({
+        "role": "assistant",
+        "content": assistant_reply
+    })
+
+    return assistant_reply
+
+
+# ── 3. Helper: clear memory ───────────────────────────────────────────────────
+
+def reset_conversation():
+    """Wipe the conversation history to start fresh."""
+    conversation_history.clear()
+    print("🔄 Conversation reset.\n")
+
+
+# ── 4. Main loop (run this file directly to chat in the terminal) ─────────────
+
+def main():
+    print("=" * 50)
+    print("  Simple AI Chatbot  (type 'quit' to exit)")
+    print("  Type 'reset' to start a new conversation")
+    print("=" * 50)
+    print()
+
+    while True:
+        # Get input from the user
+        user_input = input("You: ").strip()
+
+        # Skip empty input
+        if not user_input:
+            continue
+
+        # Exit command
+        if user_input.lower() in ("quit", "exit", "bye"):
+            print("Bot: Goodbye! 👋")
+            break
+
+        # Reset command
+        if user_input.lower() == "reset":
+            reset_conversation()
+            continue
+
+        # Send the message and print the reply
+        try:
+            reply = chat(user_input)
+            print(f"\nBot: {reply}\n")
+
+        except Exception as e:
+            print(f"\n⚠️  Error: {e}\n")
+
+
+if __name__ == "__main__":
+    main()
