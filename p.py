@@ -42,17 +42,20 @@ que=[
 cash=0
 
 for i, q in enumerate(que, start=1):
-    print(f"{i}. {q['question']}")
+    print(f"\n{i}. {q['question']}")
+
     for o in q["options"]:
         print(o)
 
-    answers=input("Enter the correct option: ")
+    answers=input("Enter the correct option: ").lower()
 
     if answers==q["answer"]:
+            cash=cash+5
             print ("correct")
-            cash=+5
+            
     else:
-        print(f"you are out, your cash prize is ${cash}")
+        print("you are out")
         break
 
+print(f"Total cash won: ${cash}")
 
