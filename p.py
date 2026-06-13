@@ -9,7 +9,7 @@ que=[
          "d.batman"
     ],
 
-    "answer":"d"
+    "answer": "d"
     },
     
     {"question": "what is python",
@@ -39,17 +39,20 @@ que=[
     }
 ]
 
+cash=0
+
 for i, q in enumerate(que, start=1):
-    print(i, q["question"])
+    print(f"{i}. {q['question']}")
     for o in q["options"]:
         print(o)
 
     answers=input("Enter the correct option: ")
 
-    if answers==q("answer"):
+    if answers==q["answer"]:
             print ("correct")
+            cash=+5
     else:
-        print("you are out")
+        print(f"you are out, your cash prize is ${cash}")
         break
 
 
