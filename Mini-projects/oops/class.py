@@ -8,22 +8,23 @@ class student:
     def info(self):
      print(f"{self.name} is Roll No:{self.rollno} and got {self.marks} marks")
 
-s1=student("Ahmed", "43", 91)
+students=[
 
-s2=student("Musa", "23", 31)
 
-s3=student("Haleema", "02", 53)
+student("Ahmed", "43", 91),
+
+student("Musa", "23", 31),
+
+student("Haleema", "02", 53)
+]
 
 
 result=input("Enter the rollno: ")
 
-if result=="43":
-   s1.info()
-elif result=="23":
-   s2.info()
-elif result=="02":
-   s3.info()
-else:
-   print("Roll no not found")
+for i in students:
+   if result==i.rollno:
+      i.info()
+   else:
+    print("Roll no not found")
      
     
