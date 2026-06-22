@@ -1,3 +1,5 @@
+import random
+
 questions=[
   {
    "question" : "When was linux invented?",
@@ -33,16 +35,19 @@ questions=[
   }
 ]
 
+
+
 cash=0
 for index, i in enumerate(questions, start=1) :
-  print ("\n" + f"{index}.{i['question']}")
+  que=random.choice(questions)
+  print ("\n" + f"{index}.{que['question']}")
  
-  for o in i["options"]:
+  for o in que["options"]:
    print(o)
 
   answer = input("Enter the right option: ").lower()
 
-  if answer == i["answer"]:
+  if answer == que["answer"]:
    cash += 5
    print("Correct (+5$)")
   else:
@@ -50,3 +55,4 @@ for index, i in enumerate(questions, start=1) :
    break
 
 print(f"Your Total Won Cash is: ${cash}")
+
