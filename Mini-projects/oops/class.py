@@ -1,21 +1,18 @@
 class student:
-     name="Ahmed"
-     rollno="43"
-     marks=91
-     def info(self):
-      print(f"{self.name} is Roll no:{self.rollno} and got {self.marks} marks")
+    
+    def __init__(self, name, rollno, marks):
+      self.name=name 
+      self.rollno=rollno
+      self.marks=marks
 
-s1=student()
+    def info(self):
+     print(f"{self.name} is Roll No:{self.rollno} and got {self.marks} marks")
 
-s2=student()
-s2.name="Musa"
-s2.rollno="23"
-s2.marks=31
+s1=student("Ahmed", "43", 91)
 
-s3=student()
-s3.name="Haleema"
-s3.rollno="02"
-s3.marks=65
+s2=student("Musa", "23", 31)
+
+s3=student("Haleema", "02", 53)
 
 
 result=input("Enter the rollno: ")
