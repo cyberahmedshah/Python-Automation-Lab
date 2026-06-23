@@ -41,12 +41,13 @@ cash=0
 for index, i in enumerate(questions, start=1) :
   que=random.choice(questions)
   print ("\n" + f"{index}.{que['question']}")
-  questions.remove(que)
+  
  
   for o in que["options"]:
    print(o)
 
   answer = input("Enter the right option: ").lower()
+  questions.remove(que)
 
   if answer == que["answer"]:
    cash += 5
