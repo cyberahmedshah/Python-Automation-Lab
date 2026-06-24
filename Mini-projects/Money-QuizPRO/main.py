@@ -45,11 +45,10 @@ questions=[
   }
 ]
 
-
+random.shuffle(questions)
 
 cash=0
-for index, i in enumerate(questions, start=1) :
-  que=random.choice(questions)
+for index, que in enumerate(questions, start=1) :
   print ("\n" + f"{index}.{que['question']}")
   
  
@@ -64,7 +63,6 @@ for index, i in enumerate(questions, start=1) :
   else:
    print("Wrong answer!")
    break
-  questions.remove(que)
 
 print(f"Your Total Won Cash is: ${cash}")
 
