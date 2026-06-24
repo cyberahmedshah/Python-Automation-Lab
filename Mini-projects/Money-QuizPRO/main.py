@@ -32,6 +32,16 @@ questions=[
     "d.Mark Zuckerberg"
     ],
    "answer" : "c"
+  },
+  {
+   "question" : "What is the default shell in linux?",
+   "options" : [
+   "a.Bash",
+    "b.Zsh",
+    "c.Fish", 
+    "d.Csh"
+    ],
+   "answer" : "a"
   }
 ]
 
@@ -54,7 +64,7 @@ for index, i in enumerate(questions, start=1) :
   else:
    print("Wrong answer!")
    break
-  # questions.remove(que)
+  questions.remove(que)
 
 print(f"Your Total Won Cash is: ${cash}")
 
