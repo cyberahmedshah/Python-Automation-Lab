@@ -64,5 +64,5 @@ for index, que in enumerate(questions, start=1) :
    print("Wrong answer!")
    break
 
-print(f"Your Total Won Cash is: ${cash}")
+print(f"Your Total Won Cash is: ${cash}") 
 
