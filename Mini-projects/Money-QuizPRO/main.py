@@ -55,7 +55,7 @@ for index, que in enumerate(questions, start=1) :
   for o in que["options"]:
    print(o)
 
-  answer = input("Enter the right option: ").lower()
+  answer = input("Enter the right option: ").lower() 
 
   if answer == que["answer"]:
    cash += 5
@@ -64,5 +64,5 @@ for index, que in enumerate(questions, start=1) :
    print("Wrong answer!")
    break
 
-print(f"Your Total Won Cash is: ${cash}") 
+print(f"Your Total Won Cash is: ${cash}")
 
