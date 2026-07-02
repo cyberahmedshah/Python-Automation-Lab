@@ -60,7 +60,11 @@ for index, que in enumerate(questions, start=1) :
   if answer == que["answer"]:
    cash += 5
    print("Correct (+5$)")
+  elif answer == "q":
+   print("Game exited")
+   break
   else:
+   cash -= 5
    print("Wrong answer!")
    break
 
