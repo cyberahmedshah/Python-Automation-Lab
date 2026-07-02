@@ -11,9 +11,9 @@ for i in range(1, 6):
  if i<5: 
   
   if diff<=10 and guess<secret_number:
-   print("close, it's a bit low")
+   print("close, The secret number is a bit low")
   elif diff<=10 and guess>secret_number:
-   print("close, it's a bit high")
+   print("close, The secret number is a bit high")
   elif guess<secret_number:
    print ("Too low")
   else:

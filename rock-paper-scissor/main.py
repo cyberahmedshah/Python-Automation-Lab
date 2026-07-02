@@ -37,4 +37,3 @@ while True:
     elif user_choice == 3 and computer == 2:
         print("You Won!")
 
-    print()
