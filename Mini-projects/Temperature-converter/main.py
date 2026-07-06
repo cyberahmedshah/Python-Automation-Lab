@@ -3,6 +3,6 @@ def celsuis():
   b=a-32
   return b/1.8
 
-print(celsuis()
+print(celsuis())
 
 
