@@ -1,6 +1,12 @@
-a=4
-b=5
-def add(a, b):
-    return a+b
+def greet(fx):
+    def mfx(a, b):
+        print("Hello")
+        print(f"{fx(a,b)} is the correct answer")
+        print("Thanks for using")
+    return mfx
 
-print(add(2, 3))
+@greet
+def add(a, b):
+     return a+b
+
+add(2, 3)
