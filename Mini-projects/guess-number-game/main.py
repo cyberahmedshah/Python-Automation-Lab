@@ -2,8 +2,7 @@ import random
 from flask import Flask, render_template, request, jsonify, session
 
 app = Flask(__name__)
-app.secret_key = "dev-secret-key-change-me"  # fine for local play, swap out before deploying anywhere
-
+app.secret_key = "dev-secret-key-change-me"  
 MAX_ATTEMPTS = 5
 LOW, HIGH = 1, 100
 
@@ -83,7 +82,7 @@ def api_guess():
         hint = "cold_high"
 
     session["history"].append({"guess": guess, "hint": hint})
-    session["history"] = session["history"]  # force session to notice the mutation
+    session["history"] = session["history"] 
     session.modified = True
 
     if won or out_of_tries:
